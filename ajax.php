@@ -44,7 +44,7 @@ $separatorImg       = '|';
       $productImage = $db->load_data( $connect , 'jshopping_products_images', 'product_id',$product['product_id']);//data img by id product
       foreach ($productImage as $img) {
           if ($i < 4) { //how much image load
-              $pImgCollection[$i] = 'http://riko.ua/store_media/img_products/'.$img['image_name'];
+              $pImgCollection[$i] = 'http://www.site.net/img_products/'.$img['image_name'];
           }
           $i++;
       }
@@ -58,7 +58,7 @@ $separatorImg       = '|';
           $product['manufacturer_code'],
           $product['product_quantity'],
           $product['product_price'],
-          ($pImgCollection[0] == 'http://riko.ua/store_media/img_products/'.$product['image'])  ? $pImgCollection[0] : 'http://riko.ua/store_media/img_products/'.$product['image'] ,
+          ($pImgCollection[0] == 'http://www.site.net/img_products/'.$product['image'])  ? $pImgCollection[0] : 'http://www.site.net/img_products/'.$product['image'] ,
           $pImgCollection[1],
           $pImgCollection[2],
           $pImgCollection[3],
