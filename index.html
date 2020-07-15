@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Получить файл для розетки</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+       /* $(document).ready(function () {
+            $('button#submit').click(function () {
+                event.preventDefault();
+                $.ajax({
+                    type: 'POST',
+                    url: 'ajax.php',
+                    data: $('form.form-info').serialize(),
+                    dataType: 'json',
+                    success: function (answer) {
+                        if (answer[0] == '1') {
+                            $('.alert-info').text('Успешно выгружено!').show('slow');
+                        }
+                    }
+                });
+            });
+        });*/
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Выгрузка товаров в csv файл</h1>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="alert alert-info d-none" role="alert"></div>
+                    <form class="form-info" action="ajax.php" method="post">
+                        <input type="hidden" name="download" value="1">
+                        <button type="submit" class="btn btn-primary" id="submit">Получить файл</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
